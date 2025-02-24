@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:todo/config/firebase_options.dart';
+import 'package:todo/firebase_options.dart';
 import 'package:todo/view/page/home_page.dart';
 import 'package:todo/view_model/error_message_model.dart';
 import 'package:todo/view_model/theme_view_model.dart';
