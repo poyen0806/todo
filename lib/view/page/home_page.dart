@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () => userVM.signInWithGoogle(),
                       style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(
+                        backgroundColor: WidgetStatePropertyAll(
                           themeVM.themeData.colorScheme.secondary,
                         ),
                       ),
@@ -61,7 +61,9 @@ class HomePage extends StatelessWidget {
                               child: Container(
                                 height: 500,
                                 decoration: BoxDecoration(
-                                  color: themeVM.themeData.colorScheme.surface,
+                                  color: themeVM.theme!.isDarkMode
+                                      ? Colors.grey[900]
+                                      : Colors.white,
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 width: double.infinity,
@@ -77,7 +79,9 @@ class HomePage extends StatelessWidget {
                               child: Container(
                                 height: 500,
                                 decoration: BoxDecoration(
-                                  color: themeVM.themeData.colorScheme.surface,
+                                  color: themeVM.theme!.isDarkMode
+                                      ? Colors.grey[900]
+                                      : Colors.white,
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 width: double.infinity,

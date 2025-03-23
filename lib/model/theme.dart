@@ -16,12 +16,10 @@ class Theme {
         brightness: Brightness.light,
         colorScheme: const ColorScheme.light().copyWith(
           primary: Colors.blue[500], // 主要顏色，通常用於 AppBar 的背景色等
-          secondary: Colors.blue[400], // 次要顏色，通常用於浮動按鈕等
-          background: Colors.blue[100], // 背景顏色，通常用於 Scaffold 的背景色
-          surface:  Colors.white, // 表面顏色，通常用於 Card 的背景色等
+          secondary: Colors.blue[400], // 背景顏色，通常用於 Scaffold 的背景色
+          surface:  Colors.blue[100], // 表面顏色，通常用於 Card 的背景色等
           onPrimary: Colors.white, // 在主要顏色上的文字顏色
-          onSecondary: Colors.white, // 在次要顏色上的文字顏色
-          onBackground: Colors.black, // 在背景顏色上的文字顏色
+          onSecondary: Colors.white, // 在背景顏色上的文字顏色
           onSurface: Colors.blue[900], // 在表面顏色上的文字顏色
         ),
       ),
@@ -35,12 +33,10 @@ class Theme {
         brightness: Brightness.dark,
         colorScheme: const ColorScheme.dark().copyWith(
           primary: Colors.deepPurple[400], // 主要顏色，通常用於 AppBar 的背景色等
-          secondary: Colors.grey[700], // 次要顏色，通常用於浮動按鈕等
-          background: Colors.grey[900], // 背景顏色，通常用於 Scaffold 的背景色
+          secondary: Colors.grey[700], // 背景顏色，通常用於 Scaffold 的背景色
           surface: Colors.grey[850], // 表面顏色，通常用於 Card 的背景色等
           onPrimary: Colors.white, // 在主要顏色上的文字顏色
-          onSecondary: Colors.white, // 在次要顏色上的文字顏色
-          onBackground: Colors.white, // 在背景顏色上的文字顏色
+          onSecondary: Colors.white, // 在背景顏色上的文字顏色
           onSurface: Colors.deepPurple[200], // 在表面顏色上的文字顏色
         ),
       ),

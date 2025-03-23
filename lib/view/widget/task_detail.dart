@@ -43,7 +43,7 @@ class TaskDetail extends StatelessWidget {
                       Navigator.of(context).pop();
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStatePropertyAll(
+                      backgroundColor: WidgetStatePropertyAll(
                         themeVM.themeData.colorScheme.secondary,
                       ),
                     ),

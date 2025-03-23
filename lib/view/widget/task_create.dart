@@ -33,7 +33,7 @@ class TaskCreate extends StatelessWidget {
               contentPadding: const EdgeInsets.symmetric(horizontal: 10),
               hintText: 'Enter task title',
               hintStyle: TextStyle(
-                color: themeVM.themeData.colorScheme.onSurface.withOpacity(0.7),
+                color: themeVM.themeData.colorScheme.onSurface,
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
@@ -42,7 +42,7 @@ class TaskCreate extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: themeVM.themeData.colorScheme.onBackground,
+                  color: themeVM.themeData.colorScheme.onSurface,
                 ),
               ),
             ),
@@ -77,31 +77,37 @@ class TaskCreate extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(
-                errorVM.errorMessage,
-                style: TextStyle(
-                  color: themeVM.themeData.colorScheme.error,
+              Expanded(
+                flex: 61,
+                child: Text(
+                  errorVM.errorMessage,
+                  style: TextStyle(
+                    color: themeVM.themeData.colorScheme.error,
+                  ),
                 ),
               ),
               const Spacer(),
-              ElevatedButton(
-                onPressed: () async {
-                  String todoTitle = titleController.text;
-                  String todoDetail = detailController.text;
-                  errorVM.errorMessage = await todoVM.createTask(todoTitle, todoDetail);
-
-                  if (errorVM.errorMessage == '') {
-                    titleController.clear();
-                    detailController.clear();
-                  }
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: themeVM.themeData.colorScheme.primary,
-                ),
-                child: Text(
-                  'Create Task',
-                  style: TextStyle(
-                    color: themeVM.themeData.colorScheme.onPrimary,
+              Expanded(
+                flex: 39,
+                child: ElevatedButton(
+                  onPressed: () async {
+                    String todoTitle = titleController.text;
+                    String todoDetail = detailController.text;
+                    errorVM.errorMessage = await todoVM.createTask(todoTitle, todoDetail);
+                
+                    if (errorVM.errorMessage == '') {
+                      titleController.clear();
+                      detailController.clear();
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: themeVM.themeData.colorScheme.primary,
+                  ),
+                  child: Text(
+                    'Create Task',
+                    style: TextStyle(
+                      color: themeVM.themeData.colorScheme.onPrimary,
+                    ),
                   ),
                 ),
               ),

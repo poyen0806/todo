@@ -29,7 +29,7 @@ class CardList extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () => userVM.signOut(),
                   style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(
+                    backgroundColor: WidgetStatePropertyAll(
                       themeVM.themeData.colorScheme.secondary,
                     ),
                   ),
@@ -54,8 +54,7 @@ class CardList extends StatelessWidget {
                 return ListTile(
                   title: Container(
                       decoration: BoxDecoration(
-                        color: themeVM.themeData.colorScheme.onSurface
-                            .withOpacity(0.4),
+                        color: themeVM.themeData.colorScheme.onSurface,
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Padding(
